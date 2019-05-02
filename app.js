@@ -3,6 +3,8 @@ var cloudant = require('cloudant');
 var express = require('express');
 var bodyParser = require('body-parser');
 var stringSimilarity = require('string-similarity');
+let secureEnv = require('secure-env');
+global.env = secureEnv({secret:'mySecretPassword'});
 
 var app = express();
 
@@ -13,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/',function(req,res){
   res.sendFile("views/index.html", {"root": __dirname});
 });
-var cloudant = cloudant({account:process.env.cloudantusername, password:process.env.cloudantpassword});
+var cloudant = cloudant({account:global.env.cloudantusername, password:global.env.cloudantpassword});
 
 var responsequiz1;
 var responsequiz2;
@@ -24,7 +26,7 @@ var time;
 var url;
 var counter=0;
 
-quizdb = cloudant.db.use(process.env.dbname);
+quizdb = cloudant.db.use(global.env.dbname);
 
 
 app.post('/quizsubmission', function(req,res){
