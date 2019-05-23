@@ -1,6 +1,6 @@
 # Deploy simple Quiz application and take the quiz
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBM/watson-banking-chatbot.git)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/RiyaMRoy04/simple-quiz-app.git)
 
 1. Press the above `Deploy to IBM Cloud` button and then...
 
