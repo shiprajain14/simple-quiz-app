@@ -64,11 +64,14 @@ quizdb.insert(doc,function(err,body,header){
         console.log('Error:'+err.message);
         return;
     }
-});
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    else{
+        res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write('<center><h2>Thank you for taking the quiz!</h2><center>');   
     res.write('<center><h3>You have scored '+quizscore+'!</h3><center>');   
     res.end();
+    }
+});
+    
     //return res.sendFile(__dirname+"/views/success.html");
 });
 
