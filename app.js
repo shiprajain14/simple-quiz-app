@@ -30,7 +30,7 @@ quizdb = cloudant.db.use(global.env.dbname);
 
 
 app.post('/quizsubmission', function(req,res){
-    if(stringSimilarity.compareTwoStrings(req.body.quiz_1, 'b')){
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_1,'b')){
        counter++;
        }
     if(stringSimilarity.compareTwoStrings(req.body.quiz_2,'d')){
@@ -65,16 +65,8 @@ quizdb.insert(doc,function(err,body,header){
     }
 });
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    if(quizscore==5){
-    res.write('<br/><center><h2>Awesome! You are a champ, you have scored 5/5!</h2></center>');
-    }
-    if(quizscore==4){
-    res.write('<center><h2>Wow! You have scored 4/5!</h2><center>');
-    }
-    if(quizscore<=3){
     res.write('<center><h2>Thank you for taking the quiz!</h2><center>');   
-    res.write('<center><h3>You have scored '+quizscore+' /5!</h3><center>');   
-    }
+    res.write('<center><h3>You have scored '+quizscore+'!</h3><center>');   
     res.end();
     //return res.sendFile(__dirname+"/views/success.html");
 });
