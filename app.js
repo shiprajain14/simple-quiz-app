@@ -60,6 +60,7 @@ app.post('/quizsubmission', function(req,res){
     
 quizdb.insert(doc,function(err,body,header){
     if(err){
+        res.sendFile(__dirname + "/views/error.html");
         console.log('Error:'+err.message);
         return;
     }
