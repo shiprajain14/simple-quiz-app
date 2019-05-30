@@ -47,7 +47,7 @@ app.post('/quizsubmission', function(req,res){
        }
     var quizscore = counter;
     var doc={
-        _id:req.body.cloudemail,
+        _id:req.headers.host + req.url,
         score:quizscore,
         responsequiz1: req.body.quiz_1,
         responsequiz2: req.body.quiz_2,
@@ -55,7 +55,7 @@ app.post('/quizsubmission', function(req,res){
         responsequiz4: req.body.quiz_4,
         responsequiz5: req.body.quiz_5,
         time: new Date().toISOString(),
-        url: req.headers.host + req.url
+        email: req.body.cloudemail
         };
     
 quizdb.insert(doc,function(err,body,header){
