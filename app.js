@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var stringSimilarity = require('string-similarity');
 let secureEnv = require('secure-env');
 global.env = secureEnv({secret:'mySecretPassword'});
-
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
