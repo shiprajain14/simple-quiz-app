@@ -4,7 +4,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var stringSimilarity = require('string-similarity');
 let secureEnv = require('secure-env');
-global.env = secureEnv({secret:'mySecretPassword'});
+global.env.enc = secureEnv({secret:'mySecretPassword'});
 
 var app = express();
 
