@@ -14,8 +14,8 @@
 
     <div class="container">
         <div class="py-5 text-center">
-        <h2>Developer Conference Quiz</h2>
-        <p class="lead">Answer these multiple choice questions to earn goodies!</p>
+        <h2>Welcome to Digital Conference for Developers IBM</h2>
+        <!-- <p class="lead">Answer these multiple choice questions to earn goodies!</p> -->
         </div>
         <form method="POST" action="/quizsubmission">
         <p class="lead"></p>
@@ -23,6 +23,9 @@
         Enter your Email ID:<br/>    
         <input type="text" id="cloudemail" name="cloudemail" class="form-control" placeholder="Please enter your IBM Cloud Email ID" required>
         <br/>   
+        Organization/Institution Name:<br/>    
+        <input type="text" id="org_name" name="org_name" class="form-control" placeholder="Please enter your Organization/Institution Name" required>
+        <br/> 
         1. Which technology track would you like to attend at the digital conference.<br/>
         <div class="radio">
         <label>
@@ -58,8 +61,12 @@
         <input type="radio" name="quiz_3" id="quiz_3" value="b"> At Academics
         </label>
         </div>
+        <br/> 
+        What additional learning sessions would you like to attend from IBM:<br/>    
+        <input type="text" id="area_interests" name="area_interests" class="form-control" placeholder="Please enter your Area of Interests" required>
+        <br/> 
         <!-- <br/> -->
-        <br/>
+        <!-- <br/> -->
             <div class="checkbox">
             <label>
       		<input type="checkbox" name="interested" value="Yes" checked>&nbsp;IBM may use my contact data to keep me informed of products, services and offerings.
