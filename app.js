@@ -31,26 +31,33 @@ quizdb = cloudant.db.use(global.env.dbname);
 
 
 app.post('/quizsubmission', function(req,res){
-    // if(stringSimilarity.compareTwoStrings(req.body.quiz_1,'a')){
-    //    counter++;
-    //    }
-    // if(stringSimilarity.compareTwoStrings(req.body.quiz_2,'a')){
-    //     counter++;
-    // }
-    // if(stringSimilarity.compareTwoStrings(req.body.quiz_3,'a')){
-    //    counter++;
-    //    }
+    
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_1,'b')){
+       counter++;
+       }
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_2,'a')){
+        counter++;
+    }
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_3,'b')){
+       counter++;
+       }
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_4,'b')){
+        counter++;
+    }
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_5,'a')){
+       counter++;
+       }
+       
                                       
-    var quizscore = 3;
+    var quizscore = counter;
     var doc={
         _id:req.headers.host + req.url,
-        org_name:req.body.org_name,
         responsequiz1: req.body.quiz_1,
         responsequiz2: req.body.quiz_2,
-        responsequiz3: req.body.quiz_3,
-        area_interests: req.body.area_interests,
-        // responsequiz4: req.body.quiz_4,
-        // responsequiz5: req.body.quiz_5,
+        responsequiz3: req.body.quiz_3,      
+        responsequiz4: req.body.quiz_4,
+        responsequiz5: req.body.quiz_5,
+        quizscore:quizscore,
         time: new Date().toISOString(),
         email: req.body.cloudemail,
         interested: req.body.interested
@@ -64,8 +71,10 @@ quizdb.insert(doc,function(err,body,header){
     }
     else{
         res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.write('<center><h2>Thank you for taking the quiz!</h2><center>');   
-    // res.write('<center><h3>You have scored '+quizscore+'!</h3><center>');   
+    res.write('<center><h2>Thank you for taking the quiz!</h2><center>'); 
+    res.write('<center><h3>You have scored '+quizscore+'!</h3><center>'); 
+    res.write('<center><h3>You will find details of the Digital Developer Conference : AI & Cloud in your email soon.!</h3><center>');   
+    
     res.end();
     }
 });
