@@ -14,8 +14,8 @@
 
     <div class="container">
         <div class="py-5 text-center">
-        <h2>Welcome to Digital Conference for Developers IBM</h2>
-        <!-- <p class="lead">Answer these multiple choice questions to earn goodies!</p> -->
+        <h2>Quiz</h2>
+        <p class="lead">Answer these multiple choice questions to earn goodies!</p>
         </div>
         <form method="POST" action="/quizsubmission">
         <p class="lead"></p>
@@ -26,52 +26,118 @@
         Organization/Institution Name:<br/>    
         <input type="text" id="org_name" name="org_name" class="form-control" placeholder="Please enter your Organization/Institution Name" required>
         <br/> 
-        1. just for a test.<br/>
+        1. ____________ describes how pods that are part of a deployed workload can be accessed from outside of the Kubernetes cluster. Gives clients a well-defined target address/port combination across multiple pods, including across restarts and recreations of these pods.<br/>
         <div class="radio">
         <label>
-        <input type="radio" name="quiz_1" id="quiz_1" value="a" required> Cloud
+        <input type="radio" name="quiz_4" id="quiz_4" value="a" required> Deployment
         </label>
         </div>
         <div class="radio">
         <label>
-        <input type="radio" name="quiz_1" id="quiz_1" value="b">Data and AI
+        <input type="radio" name="quiz_4" id="quiz_4" value="b"> Service
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="c"> StatefulSet
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="d"> PersistenVolume/StorageClass
+        </label>
+        </div>
+        <br/>  
+        2. Which of the sentences are correct regarding Kubernetes and OpenShift resource types?<br/>
+       <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="a" required> Pod automatically comes with volume
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="b"> All Pods must have same replica sets
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="c"> ReplicationController is resposible for managing and controlling number of Pods
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="d"> A service is created when you expose the Pod in Openshift
+        </label>
+        </div>
+        <br/>  
+        3. Which statement is correct regarding OpenShift additions over Kubernetes?<br/>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_3" id="quiz_3" value="a" required> OpenShift adds features required for real-world usage of Kubernetes.
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_3" id="quiz_3" value="b"> Container images created for OpenShift cannot be used with plain Kubernetes much less
+with Docker alone.
+        </label>
+        </div>
+          <div class="radio">
+        <label>
+        <input type="radio" name="quiz_3" id="quiz_3" value="b">Red Hat maintains forked versions of Docker and Kubernetes internal to the OCP product.
+        </label>
+        </div>
+          <div class="radio">
+        <label>
+        <input type="radio" name="quiz_3" id="quiz_3" value="b"> Doing Continuous Integration and Continuous Deployment with OCP requires external
+tools.
         </label>
         </div>
         <br/> 
-        2. Do you currently work on any IBM technology?<br/>
+        4. ____________ describes how pods that are part of a deployed workload can be accessed from outside of the Kubernetes cluster. Gives clients a well-defined target address/port combination across multiple pods, including across restarts and recreations of these pods.<br/>
         <div class="radio">
         <label>
-        <input type="radio" name="quiz_2" id="quiz_2" value="a" required> Yes.
+        <input type="radio" name="quiz_4" id="quiz_4" value="a" required> Deployment
         </label>
         </div>
         <div class="radio">
         <label>
-        <input type="radio" name="quiz_2" id="quiz_2" value="b">No.
+        <input type="radio" name="quiz_4" id="quiz_4" value="b"> Service
         </label>
         </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="c"> StatefulSet
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_4" id="quiz_4" value="d"> PersistenVolume/StorageClass
+        </label>
+        </div>
+        <br/>  
+        5. ________________ are flexible and powerful custom Kubernetes resource definitions that can be used for deploying and managing containerized workloads in a Kubernetes environment. They can also be used for packaging applications, in a manner similar to Helm charts, or they can be used together with Helm, in a complementary manner.<br/>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_5" id="quiz_5" value="a" required> ConfigMap
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_5" id="quiz_5" value="b"> Deployment
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_5" id="quiz_5" value="c"> IBM Cloud Paks™
+        </label>
+        </div> 
+        <div class="radio">
+        <label>
+        <input type="radio" name="quiz_5" id="quiz_5" value="d"> Operators
+        </label>
+        </div> 
         <br/>
-        3. How do you plan to apply the learning from this digital conference.<br/>
-        <div class="radio">
-        <label>
-        <input type="radio" name="quiz_3" id="quiz_3" value="a" required> At Work
-        </label>
-        </div>
-        <div class="radio">
-        <label>
-        <input type="radio" name="quiz_3" id="quiz_3" value="b"> At Academics
-        </label>
-        </div>
-        <br/> 
-        What additional learning sessions would you like to attend from IBM:<br/>    
-        <input type="text" id="area_interests" name="area_interests" class="form-control" placeholder="Please enter your Area of Interests" required>
-        <br/> 
-        <!-- <br/> -->
-        <!-- <br/> -->
-            <div class="checkbox">
-            <label>
-      		<input type="checkbox" name="interested" value="Yes" checked>&nbsp;IBM may use my contact data to keep me informed of products, services and offerings.
-   			</label>
- 			</div>
         <br/>
         <input type="submit" value="Submit Quiz" class="btn btn-primary btn-lg"/>
         </form>
