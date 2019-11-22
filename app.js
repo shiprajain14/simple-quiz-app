@@ -35,13 +35,13 @@ app.post('/quizsubmission', function(req,res){
     if(stringSimilarity.compareTwoStrings(req.body.quiz_1,'b')){
        counter++;
        }
-    if(stringSimilarity.compareTwoStrings(req.body.quiz_2,'a')){
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_2,'c')){
         counter++;
     }
-    if(stringSimilarity.compareTwoStrings(req.body.quiz_3,'b')){
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_3,'a')){
        counter++;
        }
-    if(stringSimilarity.compareTwoStrings(req.body.quiz_4,'b')){
+    if(stringSimilarity.compareTwoStrings(req.body.quiz_4,'c')){
         counter++;
     }
     if(stringSimilarity.compareTwoStrings(req.body.quiz_5,'a')){
@@ -73,7 +73,7 @@ quizdb.insert(doc,function(err,body,header){
         res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write('<center><h2>Thank you for taking the quiz!</h2><center>'); 
     res.write('<center><h3>You have scored '+quizscore+'!</h3><center>'); 
-    res.write('<center><h3>You will find details of the Digital Developer Conference : AI & Cloud in your email soon.!</h3><center>');   
+    res.write('<center><h3>Thank You!</h3><center>');   
     
     res.end();
     }
